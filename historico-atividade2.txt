@@ -1,0 +1,43 @@
+
+1  2026-10-13 19:07:50 echo 'export HISTTIMEFORMAT="%Y-%m-%d %H:%M:%S "' >> ~/.bashrc
+2  2026-10-13 19:08:02 source ~/.bashrc
+3  2026-10-13 19:08:13 history
+4  2026-10-13 19:11:21 sudo apt update
+5  2026-10-13 19:11:44 sudo apt install -y ca-certificates curl
+6  2026-10-13 19:15:17 sudo docker --version
+7  2026-10-13 19:15:49 echo "# INICIO DA INSTALACAO DO DOCKER"
+8  2026-10-13 19:15:56 sudo apt update
+9  2026-10-13 19:16:05 sudo apt install -y ca-certificates curl
+10 2026-10-13 19:16:12 sudo install -m 0755 -d /etc/apt/keyrings
+11 2026-10-13 19:16:21 sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+12 2026-10-13 19:16:27 sudo chmod a+r /etc/apt/keyrings/docker.asc
+13 2026-10-13 19:16:35 sudo tee /etc/apt/sources.list.d/docker.sources <<EOF
+Types: deb
+URIs: https://download.docker.com/linux/ubuntu
+Suites: $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}")
+Components: stable
+Architectures: $(dpkg --print-architecture)
+Signed-By: /etc/apt/keyrings/docker.asc
+EOF
+14 2026-10-13 19:16:42 sudo apt update
+15 2026-10-13 19:16:50 sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+16 2026-10-13 19:17:14 sudo docker --version
+17 2026-10-13 19:17:22 sudo docker compose version
+18 2026-10-13 19:17:27 sudo docker run hello-world
+19 2026-10-13 19:17:36 echo "# FIM DA INSTALACAO DO DOCKER"
+20 2026-10-13 19:18:40 history -a
+21 2026-10-13 19:18:47 tail -n 20 ~/.bash_history
+22 2026-10-13 19:20:06 echo "# INICIO CONFIGURACAO DO DOCKER"
+23 2026-10-13 19:20:12 sudo apt update
+24 2026-10-13 19:20:20 sudo apt install -y ca-certificates curl
+25 2026-10-13 19:20:26 sudo install -m 0755 -d /etc/apt/keyrings
+26 2026-10-13 19:20:33 sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+27 2026-10-13 19:20:40 sudo chmod a+r /etc/apt/keyrings/docker.asc
+28 2026-10-13 19:20:47 sudo tee /etc/apt/sources.list.d/docker.sources <<EOF
+Types: deb
+URIs: https://download.docker.com/linux/ubuntu
+Suites: $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}")
+Components: stable
+Architectures: $(dpkg --print-architecture)
+Signed-By: /etc/apt/keyrings/docker.asc
+EOF
